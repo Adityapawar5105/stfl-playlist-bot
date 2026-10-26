@@ -1,0 +1,45 @@
+{
+  "$schema": "https://developers.reddit.com/schema/config-file.v1.json",
+  "settings": {
+    "global": {
+      "spotify-refresh-token": {
+        "type": "string",
+        "label": "Spotify Refresh Token",
+        "isSecret": true
+      }
+    }
+  },
+  "name": "stfl-playlist-bot",
+
+  "server": {},
+  "permissions": {
+    "redis": true,
+    "reddit": {
+      "enable": true,
+      "scope": "moderator"
+    },
+    "http": {
+      "enable": true,
+      "domains": ["accounts.spotify.com", "api.spotify.com", "www.youtube.com"]
+    }
+  },
+
+  "triggers": {
+    "onAppInstall": "/internal/on/app/install",
+    "onPostSubmit": "/internal/on/post-submit",
+    "onCommentCreate": "/internal/on/post-submit"
+  },
+  "scheduler": {
+    "tasks": {
+      "process-playlist-post": {
+        "endpoint": "/internal/scheduler/process-playlist-post"
+      }
+    }
+  },
+  "scripts": {
+    "dev": "npm run watch"
+  },
+  "dev": {
+    "subreddit": "stfl_playlist_bot_dev"
+  }
+}

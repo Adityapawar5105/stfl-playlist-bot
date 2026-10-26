@@ -1,0 +1,17 @@
+/node_modules/
+/dist/
+/public/*.js*
+/coverage/
+.env
+.env.*
+!.env.example
+/spotify-token.json
+*.pem
+.DS_Store
+npm-debug.log*
+
+# Local/legacy duplicates that are not part of the Devvit build graph.
+/server.ts
+/src/server/server.backup.ts
+/src/server/dir
+/src/server/server
