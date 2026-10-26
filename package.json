@@ -23,7 +23,7 @@
     "@types/node": "24.13.3",
     "devvit": "0.14.6",
     "esbuild": "0.28.2",
-    "typescript": "5.8.3"
+    "typescript": "7.0.2"
   },
   "engines": {
     "node": ">=24.0.0"
